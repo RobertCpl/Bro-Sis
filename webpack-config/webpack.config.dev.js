@@ -24,22 +24,9 @@ module.exports = {
         rules: [
             {
                 test: /\.css$/,
-                use: [
-                    {
-                      loader: MiniCssExtractPlugin.loader,
-                      options: {
-                        // you can specify a publicPath here
-                        // by default it uses publicPath in webpackOptions.output
-                        publicPath: "../",
-                      },
-                    },
-                    "css-loader",
-                  ],
+                use: [MiniCssExtractPlugin.loader, "css-loader"],
               },
             
-
-
-
             {
                 test: /\.(png|jpg|jpeg|svg|gif)$/i,
                 type: 'asset/resource',

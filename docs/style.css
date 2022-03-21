@@ -67,7 +67,7 @@ body{
     height: 80vh;
     padding: 5rem 13.5rem;
     background-image: linear-gradient( to right, rgba(95, 20, 156, 0.91),rgba(95, 20, 156, 0.91)), 
-    url(../assets/images/background-heder.jpg);
+    url(assets/images/background-heder.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
