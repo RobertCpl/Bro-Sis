@@ -10,7 +10,7 @@ module.exports = {
     entry: "./src/index.js",
     output: {
         filename: "index.js",                               // lub [name].js jesli entry zamieniemy na obiekt i dany nazwe własciwosci.
-        path: path.resolve(__dirname,'../', "build"),
+        path: path.resolve(__dirname,'../', "docs"),
         assetModuleFilename: 'assets/images/[name][ext]'
         
     },
@@ -19,7 +19,17 @@ module.exports = {
         rules: [
             {
                 test: /\.css$/,
-                use: [MiniCssExtractPlugin.loader, "css-loader"],
+                use: [
+                    {
+                      loader: MiniCssExtractPlugin.loader,
+                      options: {
+                        // you can specify a publicPath here
+                        // by default it uses publicPath in webpackOptions.output
+                        publicPath: "../",
+                      },
+                    },
+                    "css-loader",
+                  ],
               },
             {
                 test: /\.(png|jpg|jpeg|svg|gif)$/i,
