@@ -10,7 +10,7 @@ module.exports = {
     entry: "./src/index.js",
     output: {
         filename: "index.js",                               // lub [name].js jesli entry zamieniemy na obiekt i dany nazwe własciwosci.
-        path: path.resolve(__dirname,'../', "build"),
+        path: path.resolve(__dirname,'../', "docs"),
         assetModuleFilename: 'assets/images/[name][ext]'
         
     },
